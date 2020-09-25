@@ -7,4 +7,4 @@ from profiles.models            import Profile
 def create_profile(sender, instance, created, **kwargs):
     print("Created: ", created)
     if created:
-        Profile.object.create(user=instance)
+        Profile.objects.create(user=instance)
